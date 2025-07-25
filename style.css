@@ -254,7 +254,7 @@ nav ul .active {
       left: 25%;
       transform: translate(-50%, -50%);
       color: white;
-      font-family: "audiowide", sans-serif;
+      font-family: "audiowide";
       text-transform: uppercase;
       text-align: center;
       font-weight: 300;
@@ -411,7 +411,7 @@ nav ul .active {
       color: black;
     }
   }
-  padding: 250px 40px 36px 40px;
+  padding: 300px 40px 36px 40px;
 }
 
 .welcome-content {
@@ -528,7 +528,7 @@ nav ul .active {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 36px;
-    padding: 24px;
+    padding: 16px 0px 16px 0px;
   
     img {
       width: 100%;
@@ -619,6 +619,11 @@ background-attachment: fixed;
         width: fit-content;
         white-space: nowrap;
         background-color: transparent;
+    }
+    p{
+        font-size: 24px;
+        line-height: 1.5;
+        
     }
   flex: 1;
 }
@@ -766,10 +771,43 @@ background-attachment: fixed;
   left: 50%; /* previously 25%, adjust as needed */
   text-align: center; /* keep it centered horizontally */
 }
-
-
-
+.amenities-container {
+  flex-direction: column;
+  padding: 20px; /* ↓ already reduced padding */
+  align-items: center; /* ← center all content horizontally */
+  text-align: center;  /* optional: centers button text */
 }
+
+.amenities-tabs {
+  justify-content: center; /* center the tab buttons */
+  flex-wrap: wrap;
+}
+
+.amenities-navs {
+  justify-content: center; /* center the next/prev buttons */
+}
+
+.amenities-aside {
+  align-items: center; /* center the left side content */
+}
+#plans {
+    padding: 24px 20px; /* reduced padding */
+  }
+  .amenities-icons
+  {    display: flex
+    ;
+        flex-wrap: wrap;
+        gap: 30px 60px;
+        justify-content: space-evenly;
+    }
+    .enquire-button {
+      display: none;
+    }
+  }
+
+
+
+
 
 
 /* TABLET. STYLES */
