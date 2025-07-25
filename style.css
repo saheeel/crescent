@@ -38,7 +38,6 @@ body {
     width: auto;
 }
 
-/* Desktop Navigation */
 nav {
     display: block;
 }
@@ -74,7 +73,7 @@ nav ul .active {
     background-color: black;
 }
 
-/* Hamburger Menu Button */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -105,7 +104,6 @@ nav ul .active {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile Menu Overlay */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -125,7 +123,6 @@ nav ul .active {
     visibility: visible;
 }
 
-/* Mobile Menu */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -194,7 +191,6 @@ nav ul .active {
     border-left-color: #333;
 }
 
-/* Builder logo in mobile menu */
 .mobile-builder {
     position: absolute;
     bottom: 30px;
@@ -211,7 +207,6 @@ nav ul .active {
     transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .header-container {
         padding: 20px 24px;
@@ -791,6 +786,9 @@ nav ul .active {
 .hero-image h1 {
   left: 50%; 
   text-align: center; 
+  span {
+    font-size: 56px; 
+  }
 }
 .amenities-container {
   flex-direction: column;
