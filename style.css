@@ -328,6 +328,7 @@ nav ul .active {
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
+    border-radius: 0pxˀˀ;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -351,6 +352,7 @@ nav ul .active {
 /* Medium screens (Tablets) */
 @media (min-width: 768px) {
     .hero-stats {
+        border-radius: 0px;
         
         gap: 2rem; /* Increase gap for tablets */
     }
