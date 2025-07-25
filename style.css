@@ -743,6 +743,11 @@ nav ul .active {
 
 /* MOBILE STYLES */
 @media screen and (max-width: 768px) {
+  .amenities-title {
+    background-size: 40px auto; 
+    background-position: left center;
+  }
+  
   .welcome-content {
     grid-template-columns: repeat(1, 1fr);
   }
