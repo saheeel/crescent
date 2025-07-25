@@ -774,6 +774,17 @@ nav ul .active {
  
 }
 
+@media screen and (max-width: 900px)
+{
+  .hero-image h1 {
+    left: 50%; 
+    text-align: center; 
+    span {
+      font-size: 56px; 
+    }
+}
+}
+
 @media screen and (max-width: 768px) {
   .amenities-container {
     flex-direction: column;
