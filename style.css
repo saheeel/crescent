@@ -245,31 +245,41 @@ nav ul .active {
 }
 
 .hero-image {
-  height: 70vh;
-  position: relative;
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    span {
-      text-transform: capitalize;
+    height: 70vh;
+    position: relative;
+  
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: "audiowide", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.5rem; /* top line smaller */
+  
+      span {
+        display: block;
+        text-transform: capitalize;
+        font-size: 4rem;  /* bottom span bigger */
+        font-weight: 600;
+      }
+    }
+  
+    .hero-socials {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
     }
   }
-
-  .hero-socials {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 999;
-  }
+  
   
   .social-icon {
     width: 48px;
@@ -293,7 +303,7 @@ nav ul .active {
   }
   
 
-  
+  .hero-image{
   img {
     width: 100%;
     height: 100%;
@@ -301,6 +311,7 @@ nav ul .active {
     filter: brightness(0.5);
   }
 }
+
 
 .sub-hero {
     display: flex;
@@ -314,8 +325,7 @@ nav ul .active {
     justify-content: center;
     gap: 1.5rem; /* Gap for mobile */
     padding: 1.5rem;
-    background-color: #414a4d;
-    border-radius: 1.5rem; /* Softer radius for mobile */
+    background-color: #414a4d; /* Softer radius for mobile */
     width: 100%;
     box-sizing: border-box;
 }
@@ -328,7 +338,7 @@ nav ul .active {
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
-    border-radius: 0pxˀˀ;
+    border-radius: 0px;
     display: flex;
     gap: 8px;
     align-items: center;
@@ -399,7 +409,7 @@ nav ul .active {
       color: black;
     }
   }
-  padding: 200px 40px 36px 40px;
+  padding: 250px 40px 36px 40px;
 }
 
 .welcome-content {
@@ -726,7 +736,9 @@ background-attachment: fixed;
   }
   .welcome-image {
     img {
-      width: 80%;
+      width: 70%;
+      align-items: center;
+      justify-content: center;
     
       object-fit: contain;
     }
