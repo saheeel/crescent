@@ -258,12 +258,12 @@ nav ul .active {
       text-transform: uppercase;
       text-align: center;
       font-weight: 300;
-      font-size: 1.5rem; /* top line smaller */
+      font-size: 1.5rem;
   
       span {
         display: block;
         text-transform: capitalize;
-        font-size: 4rem;  /* bottom span bigger */
+        font-size: 4rem;  
         font-weight: 600;
       }
     }
@@ -323,19 +323,17 @@ nav ul .active {
 
 .hero-stats {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 1.5rem; /* Gap for mobile */
+    gap: 1.5rem; 
     padding: 1.5rem;
-    background-color: #414a4d; /* Softer radius for mobile */
+    background-color: #414a4d; 
     width: 100%;
     box-sizing: border-box;
 }
 
 .hero-stat {
     color: white;
-    /* The background image from your CSS is preserved here. */
-    /* Ensure the path 'assets/mainhed.png' is correct in your project. */
     background-image: url("assets/mainhed.png");
     background-size: contain;
     background-position: left;
@@ -344,18 +342,17 @@ nav ul .active {
     display: flex;
     gap: 8px;
     align-items: center;
-    /* We add padding here to account for the background image space */
     padding-left: 30px; 
 }
 
 .hero-stat .number {
     font-family: "Oswald", sans-serif;
-    font-size: 2.5rem; /* Smaller font for mobile */
+    font-size: 2.5rem; 
     line-height: 1;
 }
 
 .hero-stat .text {
-    font-size: 0.875rem; /* Smaller font for mobile */
+    font-size: 0.875rem; 
     line-height: 1.2;
 }
 
@@ -366,33 +363,33 @@ nav ul .active {
     .hero-stats {
         border-radius: 0px;
         
-        gap: 2rem; /* Increase gap for tablets */
+        gap: 2rem; 
     }
     .hero-stat .number {
-        font-size: 3rem; /* Increase font size */
+        font-size: 3rem; 
     }
     .hero-stat .text {
-        font-size: 0.9rem; /* Increase font size */
+        font-size: 0.9rem;
     }
 }
 
-/* Large screens (Desktops) - Applying your original styles */
+
 @media (min-width: 1200px) {
     .hero-stats {
-        flex-wrap: nowrap; /* Prevent wrapping on large screens */
+        flex-wrap: nowrap; 
         height: 135px;
         gap: 48px;
         padding: 16px;
-        border-radius: 100px; /* Full pill shape */
-        width: auto; /* Allow container to size to its content */
+        border-radius: 100px; 
+        width: auto; 
     }
 
     .hero-stat {
-         padding-left: 0; /* Remove the padding helper */
+         padding-left: 0; 
     }
 
     .hero-stat .number {
-        margin-left: 24px; /* Add margin back as per your style */
+        margin-left: 24px; 
         font-size: 4rem;
     }
 
@@ -580,18 +577,42 @@ nav ul .active {
   }
   
 
-#amenities {
-  background: url("assets/footer-bg.jpg");
+  #amenities {
+    position: relative;
+    background: url("assets/1.jpg");
     background-size: cover;
-background-position: center;
-background-attachment: fixed;
-}
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+  }
+  
+  #amenities::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 2;
+  }
+  
+
+  .amenities-container {
+    display: flex;
+    gap: 24px;
+    padding: 80px;
+    position: relative;
+    z-index: 3;
+  }
+  
 .amenities-container {
   display: flex;
   gap: 24px;
   padding: 80px;
   
 }
+
 
 .amenities-title{
     font-family: audiowide;
@@ -760,38 +781,38 @@ background-attachment: fixed;
   }
   .plans-container {
   flex-direction: column;
-  gap: 24px; /* Optional: adds space between title and buttons */
-  align-items: flex-start; /* Or center, based on your preference */
+  gap: 24px; 
+  align-items: flex-start; 
 }
 .brochure-button {
   margin: 0 auto;
   display: flex;
 }
 .hero-image h1 {
-  left: 50%; /* previously 25%, adjust as needed */
-  text-align: center; /* keep it centered horizontally */
+  left: 50%; 
+  text-align: center; 
 }
 .amenities-container {
   flex-direction: column;
-  padding: 20px; /* ↓ already reduced padding */
-  align-items: center; /* ← center all content horizontally */
-  text-align: center;  /* optional: centers button text */
+  padding: 20px;
+  align-items: center; 
+  text-align: center;  
 }
 
 .amenities-tabs {
-  justify-content: center; /* center the tab buttons */
+  justify-content: center; 
   flex-wrap: wrap;
 }
 
 .amenities-navs {
-  justify-content: center; /* center the next/prev buttons */
+  justify-content: center;
 }
 
 .amenities-aside {
-  align-items: center; /* center the left side content */
+  align-items: center; 
 }
 #plans {
-    padding: 24px 20px; /* reduced padding */
+    padding: 24px 20px;
   }
   .amenities-icons
   {    display: flex
@@ -807,7 +828,205 @@ background-attachment: fixed;
 
 
 
+.enquire-sticky-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  z-index: 999;
+  cursor: pointer;
+
+  animation: gradient-border 2s linear infinite;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    linear-gradient(90deg, #00f260, #0575e6, #ff6ec4);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 300% 100%;
+}
+
+.enquire-sticky-btn:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.enquire-sticky-btn .icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(100);
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%, 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 0% 50%;
+  }
+}
 
 
 
-/* TABLET. STYLES */
+.site-footer {
+  background: url("assets/bgg.jpg") no-repeat center center;
+  background-size: cover;
+  color: #333;
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+  border-top: 1px solid #ddd;
+  position: relative;
+  z-index: 1;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logos {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 100%;
+  padding: 20px 0;
+}
+
+.footer-logo {
+  max-width: 160px;
+  height: auto;
+  filter: none;
+}
+
+.footer-contact {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.footer-contact .icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-top: 3px;
+}
+
+/* Responsive – mobile & tablet view */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logos {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 400px;
+  }
+
+  .footer-contact p {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .footer-logo {
+    max-width: 100px;
+  }
+}
+
+
+
+  .enquire-sticky-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    border-radius: 24px;
+  
+    background: rgba(189, 189, 189, 0.2); 
+    backdrop-filter: blur(10px);
+  
+    border: 2px solid transparent;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+      linear-gradient(90deg, #f9f9f9, #d9d9d9, #d4ced1);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+  
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+    cursor: pointer;
+  
+    transition: 
+      background 0.3s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  
+  .enquire-sticky-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+      linear-gradient(90deg, #b2bab5, #c5c5c5, #d0d0d0);
+  
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(191, 191, 191);
+  }
+  
+  .enquire-sticky-btn .icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+  }
+  

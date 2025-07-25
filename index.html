@@ -14,7 +14,6 @@
               <img src="assets/logo.png" alt="logo" />
           </div>
           
-          <!-- Desktop Navigation -->
           <nav>
               <ul>
                   <li><a class="active" href="#">Home</a></li>
@@ -41,10 +40,9 @@
       </div>
   </header>
 
-  <!-- Mobile Menu Overlay -->
+
   <div class="mobile-menu-overlay" onclick="closeMenu()"></div>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu">
       <ul>
           <li><a class="active" href="#" onclick="closeMenu()">Home</a></li>
@@ -171,7 +169,7 @@
               <h3>Amenities</h3>
             </div>
             <p>An Amalgamation of luxurious Amenities & Natual Elements</p>
-            <butto class="enquire-button">Enquire Now</button>
+            <!-- <butto class="enquire-button">Enquire Now</button> -->
           </div>
           <div class="amenities-main">
             <div class="amenities-tabs">
@@ -366,7 +364,33 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logos">
+          <img src="assets/logo.png" alt="logo" class="footer-logo" />
+          <img src="assets/logo2.png" alt="builder logo" class="footer-logo" />
+        </div>
+        <div class="footer-contact">
+          <p><img src="assets/icons/phone.png" class="icon" /> +91-7997555555</p>
+          <p><img src="assets/icons/mail.png" class="icon" /> enquiry@candeurcrescent.com</p>
+          <p style="display: flex; gap: 10px;">
+            <img src="assets/icons/location.png" class="icon" style="align-self: flex-start;" />
+            245, S.No. 104 & 106, Next to Sancta Maria International School,<br />
+            Serilingampalle-Gachibowli Road,<br />
+            Serilingampalle, Hyderabad-500019
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+    <a href="#contact" class="enquire-sticky-btn">
+      <img src="assets/icons/phone.png" alt="Phone" class="icon" />
+      Enquire Now
+    </a>
+    
+    
+    
+    
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const tabs = document.querySelectorAll(".amenities-tab button");
@@ -404,7 +428,7 @@
           });
         });
     
-        // Trigger first tab by default
+       
         tabs[0].click();
       });
 
@@ -412,13 +436,13 @@
     const masterBtn = document.getElementById("btn-master");
     const towerBtn = document.getElementById("btn-tower");
     const gallery = document.querySelector(".plan-images");
-    const imageCount = 5; // number of images to show
+    const imageCount = 5; 
 
     function updateImages(prefix) {
       gallery.innerHTML = "";
       for (let i = 1; i <= imageCount; i++) {
         const img = document.createElement("img");
-        img.src = `assets/${prefix}.jpg`; // uses a.jpg or b.jpg
+        img.src = `assets/${prefix}.jpg`; 
         img.alt = `${prefix} Plan ${i}`;
         img.style.width = "100%";
         img.style.borderRadius = "8px";
@@ -430,16 +454,16 @@
     masterBtn.addEventListener("click", () => {
       masterBtn.classList.add("active");
       towerBtn.classList.remove("active");
-      updateImages("b"); // for master plan
+      updateImages("b"); 
     });
 
     towerBtn.addEventListener("click", () => {
       towerBtn.classList.add("active");
       masterBtn.classList.remove("active");
-      updateImages("a"); // for tower plan
+      updateImages("a"); 
     });
 
-    // Load Tower Plan by default
+    
     updateImages("a");
   });
 
@@ -472,19 +496,19 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close menu when clicking on menu links
+        
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
 
-        // Close menu on escape key
+        
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeMenu();
             }
         });
 
-        // Handle window resize
+        
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 closeMenu();
